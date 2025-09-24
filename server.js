@@ -4,13 +4,9 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const app = express();
 
-mongoose.connect('mongodb://127.0.0.1:27017/mentornet')
-.then(() => {
-    console.log('MongoDB connected successfully');
-})
-.catch((err) => {
-    console.error('MongoDB connection error:', err);
-});
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log('MongoDB connected successfully'))
+  .catch((err) => console.error('MongoDB connection error:', err));
 
 const User = mongoose.model('User', {
     username: String,
@@ -21,6 +17,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/index.html');
