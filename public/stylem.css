@@ -1,0 +1,101 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  margin: 0;
+  padding: 2rem;
+  color: white;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #ffd700;
+}
+
+.mentor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 900px) {
+  .mentor-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .mentor-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mentor-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.mentor-card:hover {
+  transform: translateY(-5px);
+}
+
+.mentor-image {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mentor-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mentor-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #ffd700;
+}
+
+.mentor-card p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: #ffd700;
+  color: #333;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ffed4a;
+}
+.form-container p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.form-container p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: white;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Mentors</title>
+    <link rel="stylesheet" href="/stylem.css">
+</head>
+<body class="form-page">
+<body class="form-page">
+  <div class="form-container">
+    <h2>Meet Our Mentors</h2>
+    <div class="mentor-grid">
+      <% const mentors = [
+        { id: 1, name: "Sneha", role: "Backend Developer", emoji: "👩‍💻" },
+        { id: 2, name: "Manisha", role: "Cyber Security", emoji: "🛡️" },
+        { id: 3, name: "Pruthvee", role: "Robotics Engineer", emoji: "🤖" },
+        { id: 4, name: "Ankita", role: "Frontend Developer", emoji: "🔧" },
+        { id: 5, name: "Ritika", role: "Data Analyst", emoji: "📊" },
+        { id: 6, name: "Akshay", role: "Financial Analyst", emoji: "💼" }
+      ]; %>
+
+      <% mentors.forEach(mentor => { %>
+        <div class="mentor-card">
+          <div class="mentor-image">
+            <img src="/images/silhouette.png" alt="Mentor Image">
+          </div>
+          <h3><%= mentor.emoji %> <%= mentor.name %></h3>
+          <p><%= mentor.role %></p>
+          <a href="/mentor/<%= mentor.id %>" class="btn">View More</a>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</body>
+</body>
+</body>
+</html>

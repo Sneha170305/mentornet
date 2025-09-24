@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= mentor.name %> – MentorNet</title>
+  <link rel="stylesheet" href="/stylem.css">
+</head>
+<body>
+  <div class="form-container">
+    <div class="mentor-image">
+      <img src="/images/silhouette.png" alt="Mentor Image">
+    </div>
+    <h2><%= mentor.name %></h2>
+    <p><strong>Role:</strong> <%= mentor.role %></p>
+    <p><strong>About:</strong> <%= mentor.bio %></p>
+    <a href="/mentors" class="btn">← Back to Mentors</a><br><br><br>
+    <form action="/book-session" method="POST">
+  <button type="submit" class="btn">Book Session</button>
+</form>
+  </div>
+</body>
+</html>
