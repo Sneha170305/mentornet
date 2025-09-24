@@ -50,13 +50,19 @@ app.post('/signup', async (req, res) => {
 });
 
 app.post('/login', async (req, res) => {
+  try {
     const { username, password } = req.body;
     const user = await User.findOne({ username, password });
+
     if (user) {
-        res.redirect('/mentors');
+      res.redirect('/mentors');
     } else {
-        res.redirect('/signuppop');
+      res.redirect('/signuppop');
     }
+  } catch (err) {
+    console.error('Login error:', err);
+    res.status(500).send('Internal server error');
+  }
 });
 
 app.get('/mentor/:id', (req, res) => {
