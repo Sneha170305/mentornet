@@ -8,8 +8,7 @@ connectDB();
 
 const app = express();
 
-app.use(cors({ origin: 'http://localhost:3000', credentials: true }));
-app.use(express.json());
+app.use(cors({ origin: "https://mentornet-frontend.onrender.com" }));
 
 // Routes
 app.use('/api/auth', require('./routes/auth'));
